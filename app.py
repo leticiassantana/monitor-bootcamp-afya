@@ -47,6 +47,9 @@ html, body, [class*="css"] {{
 
 /* Hide Streamlit chrome */
 #MainMenu, footer, header {{ visibility: hidden; }}
+
+/* Ensure sidebar toggle is always visible */
+[data-testid="collapsedControl"] {{ display: flex !important; visibility: visible !important; }}
 .block-container {{ padding-top: 0 !important; max-width: 1280px; }}
 
 /* ── TOP HEADER ── */
@@ -613,7 +616,7 @@ tabs = st.tabs(tab_labels)
 for tab, tier_key in zip(tabs, tier_options):
     with tab:
         if tier_key == "Todos":
-            filtered = [p for p in div_ppl if p["tier"] != "Abandono"]
+            filtered = div_ppl
         else:
             filtered = [p for p in div_ppl if p["tier"] == tier_key]
 
@@ -719,8 +722,8 @@ if len(sorted_dates) >= 2:
     fig.add_trace(go.Scatter(
         x=labels_chart, y=[round(v, 1) for v in div_avgs],
         name="Grupo Diversidade",
-        line=dict(color=ROXO, width=3),
-        marker=dict(size=8, color=ROXO),
+        line=dict(color=YELLOW, width=3),
+        marker=dict(size=8, color=YELLOW),
         fill="tozeroy",
         fillcolor="rgba(39,0,40,0.07)",
     ))

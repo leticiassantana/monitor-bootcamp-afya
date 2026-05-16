@@ -12,27 +12,28 @@ st.set_page_config(
     page_title="Monitor de Formação · Bootcamp Afya",
     page_icon="🎓",
     layout="wide",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded",
 )
 
 # ── BRAND ────────────────────────────────────────────────────────────────────
 YELLOW  = "#eddc11"
 ROXO    = "#270028"
-BEIGE   = "#b79400"
-WHITE   = "#FFFFFF"
-GREEN   = "#27AE60"
-ORANGE  = "#F5A623"
-RED     = "#E24B4A"
-GRAY    = "#9E9E9E"
+CARD_BG = "#3a003d"
+CARD_BORDER = "#5a1060"
+WHITE   = "#f0eaf5"
+GREEN   = "#4ecb71"
+ORANGE  = "#f5a623"
+RED     = "#e24b4a"
+GRAY    = "#9a8fa5"
 BLUE    = "#2E86AB"
 
 TIER_COLORS = {
-    "Formado":         {"bg": "#d4edda", "text": "#155724", "icon": "✅"},
-    "No Caminho":      {"bg": "#d1ecf1", "text": "#0c5460", "icon": "🟢"},
-    "Alta Prioridade": {"bg": "#ede7f6", "text": ROXO,      "icon": "🎯"},
-    "Atenção":         {"bg": "#fff3cd", "text": "#856404", "icon": "🟡"},
-    "Estagnado":       {"bg": "#f8d7da", "text": "#721c24", "icon": "🔴"},
-    "Abandono":        {"bg": "#e2e3e5", "text": "#383d41", "icon": "⚫"},
+    "Formado":         {"bg": "#1a4d2e", "text": "#4ecb71", "icon": "✅"},
+    "No Caminho":      {"bg": "#0d3d4d", "text": "#5bc8e0", "icon": "🟢"},
+    "Alta Prioridade": {"bg": "#4a1050", "text": "#eddc11", "icon": "🎯"},
+    "Atenção":         {"bg": "#4d3a00", "text": "#f5c842", "icon": "🟡"},
+    "Estagnado":       {"bg": "#4d1a1a", "text": "#e24b4a", "icon": "🔴"},
+    "Abandono":        {"bg": "#2a2a2a", "text": "#9a8fa5", "icon": "⚫"},
 }
 
 # ── CUSTOM CSS ────────────────────────────────────────────────────────────────
@@ -50,7 +51,7 @@ html, body, [class*="css"] {{
 
 /* ── TOP HEADER ── */
 .pda-header {{
-    background: {ROXO};
+    background: #1a0020;
     margin: -1rem -1rem 2rem -1rem;
     padding: 28px 40px;
     display: flex;
@@ -58,6 +59,7 @@ html, body, [class*="css"] {{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
+    border-bottom: 2px solid {YELLOW};
 }}
 .pda-header h1 {{
     font-family: 'Dela Gothic One', sans-serif !important;
@@ -67,7 +69,7 @@ html, body, [class*="css"] {{
     letter-spacing: -0.3px;
 }}
 .pda-header p {{
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.5);
     font-size: 12px;
     margin: 4px 0 0 0;
     font-weight: 300;
@@ -83,16 +85,16 @@ html, body, [class*="css"] {{
 
 /* ── KPI CARDS ── */
 .kpi-card {{
-    background: {WHITE};
+    background: {CARD_BG};
     border-radius: 12px;
     padding: 20px;
-    border: 1px solid #e0d9f0;
+    border: 1px solid {CARD_BORDER};
     text-align: left;
 }}
 .kpi-label {{
     font-size: 10px;
     font-weight: 600;
-    color: #6b6b8a;
+    color: #9a8fa5;
     text-transform: uppercase;
     letter-spacing: 0.6px;
     margin-bottom: 6px;
@@ -100,22 +102,22 @@ html, body, [class*="css"] {{
 .kpi-value {{
     font-family: 'Dela Gothic One', sans-serif !important;
     font-size: 36px;
-    color: {ROXO};
+    color: {YELLOW};
     line-height: 1;
     margin-bottom: 4px;
 }}
 .kpi-value.green {{ color: {GREEN}; }}
 .kpi-sub {{
     font-size: 11px;
-    color: #9a9ab0;
+    color: #7a6f85;
 }}
 
 /* ── GOAL BAR ── */
 .goal-wrap {{
-    background: {WHITE};
+    background: {CARD_BG};
     border-radius: 12px;
     padding: 18px 24px;
-    border: 1px solid #e0d9f0;
+    border: 1px solid {CARD_BORDER};
     margin-bottom: 8px;
     display: flex;
     align-items: center;
@@ -124,12 +126,12 @@ html, body, [class*="css"] {{
 .goal-label {{
     font-size: 12px;
     font-weight: 600;
-    color: {ROXO};
+    color: {WHITE};
     min-width: 140px;
 }}
 .goal-track {{
     flex: 1;
-    background: #e0d9f0;
+    background: #5a1060;
     border-radius: 6px;
     height: 10px;
     overflow: hidden;
@@ -137,17 +139,17 @@ html, body, [class*="css"] {{
 .goal-fill {{
     height: 100%;
     border-radius: 6px;
-    background: linear-gradient(90deg, {GREEN}, #52c77a);
+    background: linear-gradient(90deg, {GREEN}, #7de89a);
 }}
 .goal-info {{
     font-size: 11px;
-    color: #9a9ab0;
+    color: #7a6f85;
     margin-top: 5px;
 }}
 .goal-pct {{
     font-family: 'Dela Gothic One', sans-serif !important;
     font-size: 22px;
-    color: {ROXO};
+    color: {YELLOW};
     min-width: 52px;
     text-align: right;
 }}
@@ -155,13 +157,13 @@ html, body, [class*="css"] {{
 /* ── SECTION TITLE ── */
 .section-title {{
     font-family: 'Dela Gothic One', sans-serif !important;
-    color: {ROXO};
+    color: {YELLOW};
     font-size: 17px;
     margin: 0 0 2px 0;
 }}
 .section-sub {{
     font-size: 12px;
-    color: #9a9ab0;
+    color: #7a6f85;
     margin: 0 0 16px 0;
 }}
 
@@ -180,28 +182,29 @@ html, body, [class*="css"] {{
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
-    background: {WHITE};
+    background: {CARD_BG};
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #e0d9f0;
+    border: 1px solid {CARD_BORDER};
 }}
 .styled-table thead th {{
-    background: #f7f5fb;
+    background: #1a0020;
     padding: 10px 14px;
     text-align: left;
     font-size: 10px;
     font-weight: 600;
-    color: #6b6b8a;
+    color: #9a8fa5;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border-bottom: 1px solid #e0d9f0;
+    border-bottom: 1px solid {CARD_BORDER};
     white-space: nowrap;
 }}
 .styled-table tbody tr {{
-    border-bottom: 1px solid #f0ecf8;
+    border-bottom: 1px solid #4a0050;
     transition: background 0.1s;
+    color: {WHITE};
 }}
-.styled-table tbody tr:hover {{ background: #f7f5fb; }}
+.styled-table tbody tr:hover {{ background: #4a0050; }}
 .styled-table tbody td {{
     padding: 10px 14px;
     vertical-align: middle;
@@ -209,30 +212,30 @@ html, body, [class*="css"] {{
 .prog-bar-wrap {{ display: flex; align-items: center; gap: 8px; }}
 .prog-bar {{
     width: 64px; height: 6px;
-    background: #e0d9f0; border-radius: 3px; overflow: hidden;
+    background: #5a1060; border-radius: 3px; overflow: hidden;
     display: inline-block;
 }}
 .prog-fill {{ height: 100%; border-radius: 3px; }}
 .delta-pos {{ color: {GREEN}; font-weight: 600; }}
 .delta-neg {{ color: {RED};   font-weight: 600; }}
 .delta-zero {{ color: {GRAY}; }}
-.td-name {{ font-weight: 500; }}
-.td-name small {{ display: block; font-size: 11px; color: #9a9ab0; font-weight: 400; }}
-.wpp {{ font-size: 11px; color: #9a9ab0; }}
+.td-name {{ font-weight: 500; color: {WHITE}; }}
+.td-name small {{ display: block; font-size: 11px; color: #7a6f85; font-weight: 400; }}
+.wpp {{ font-size: 11px; color: #7a6f85; }}
 
 /* ── UPLOAD AREA ── */
 .upload-box {{
-    background: {WHITE};
-    border: 2px dashed #c0b4d8;
+    background: {CARD_BG};
+    border: 2px dashed {CARD_BORDER};
     border-radius: 12px;
     padding: 32px;
     text-align: center;
-    color: #9a9ab0;
+    color: #7a6f85;
     font-size: 13px;
 }}
 .upload-box h3 {{
     font-family: 'Dela Gothic One', sans-serif !important;
-    color: {ROXO};
+    color: {YELLOW};
     margin-bottom: 8px;
 }}
 
@@ -240,17 +243,17 @@ html, body, [class*="css"] {{
 .empty-state {{
     text-align: center;
     padding: 80px 40px;
-    background: {WHITE};
+    background: {CARD_BG};
     border-radius: 16px;
-    border: 2px dashed #e0d9f0;
+    border: 2px dashed {CARD_BORDER};
 }}
 .empty-state h2 {{
     font-family: 'Dela Gothic One', sans-serif !important;
-    color: {ROXO};
+    color: {YELLOW};
     font-size: 24px;
     margin-bottom: 12px;
 }}
-.empty-state p {{ color: #9a9ab0; font-size: 14px; }}
+.empty-state p {{ color: #9a8fa5; font-size: 14px; }}
 </style>
 """, unsafe_allow_html=True)
 
@@ -534,10 +537,11 @@ with st.sidebar:
 
 # ── EMPTY STATE ───────────────────────────────────────────────────────────────
 if not history:
-    st.markdown("""
+    st.markdown(f"""
     <div class="empty-state">
-      <h2>Bem-vinda ao Monitor</h2>
-      <p>Use o painel lateral para carregar os relatórios semanais da DIO.<br>
+      <h2>👈 Carregue um relatório para começar</h2>
+      <p>No <strong style="color:{ROXO}">painel lateral à esquerda</strong>, clique em <strong>"Browse files"</strong>
+      e selecione os arquivos CSV ou XLSX baixados da DIO.<br><br>
       Você pode selecionar múltiplos arquivos de uma vez para carregar o histórico completo.</p>
     </div>
     """, unsafe_allow_html=True)
@@ -735,12 +739,12 @@ if len(sorted_dates) >= 2:
     fig.update_layout(
         height=280,
         margin=dict(l=0, r=0, t=20, b=0),
-        plot_bgcolor="white",
-        paper_bgcolor="white",
-        font=dict(family="IBM Plex Sans", size=12),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
-        yaxis=dict(range=[0, 105], ticksuffix="%", gridcolor="#f0ecf8"),
-        xaxis=dict(gridcolor="#f0ecf8"),
+        plot_bgcolor="#3a003d",
+        paper_bgcolor="#3a003d",
+        font=dict(family="IBM Plex Sans", size=12, color="#f0eaf5"),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0, font=dict(color="#f0eaf5")),
+        yaxis=dict(range=[0, 105], ticksuffix="%", gridcolor="#5a1060", tickfont=dict(color="#9a8fa5")),
+        xaxis=dict(gridcolor="#5a1060", tickfont=dict(color="#9a8fa5")),
     )
     st.plotly_chart(fig, use_container_width=True)
 else:

@@ -540,8 +540,9 @@ st.markdown("<div style='height:20px'></div>", unsafe_allow_html=True)
 # ═══════════════════════════════════════════════════════════════════
 col_donut, col_momentum = st.columns([1, 1.6])
 
+pct_div = round(div_total / total * 100) if total else 0
 with col_donut:
-    st.markdown(f'<p class="section-title">Distribuição do Grupo</p><p class="section-sub">{div_total} pessoas · grupo de diversidade</p>', unsafe_allow_html=True)
+    st.markdown(f'<p class="section-title">Distribuição do Grupo</p><p class="section-sub">{div_total} pessoas · grupo de diversidade · {pct_div}% do total de inscritos</p>', unsafe_allow_html=True)
 
     donut_labels = list(TIER_COLORS.keys())
     donut_values = [tier_counts.get(t, 0) for t in donut_labels]

@@ -755,4 +755,4 @@ st.markdown(f"""
 <div style="text-align:center;padding:40px 0 20px;color:#c0b4d8;font-size:11px">
   Programadores do Amanhã · Monitor Bootcamp Afya
 </div>
-""", unsafe_allow_html=Tr
+""", unsafe_allow_html=True)

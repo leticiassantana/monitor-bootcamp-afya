@@ -264,18 +264,18 @@ def generate_message(p: dict) -> str:
     if tier == "Alta Prioridade":
         return (
             f"Oi, {nome}! 👋\n\n"
-            f"Você está na reta final do Bootcamp Afya e tem tudo para garantir sua certificação em "
-            f"Automação de Dados com IA antes do encerramento em 12 de julho. Não para agora!\n\n"
-            f"Você não precisa chegar lá sozinha. A PdA oferece monitorias síncronas de todo o conteúdo "
+            f"Você está na reta final do Bootcamp DIOxAfyaxPdA e tem tudo para garantir sua certificação em "
+            f"Automação de Dados com IA antes do encerramento em 12 de julho. Não para agora!📆\n\n"
+            f"Você não precisa chegar lá sozinho(a). A PdA oferece monitorias síncronas de todo o conteúdo "
             f"do bootcamp. Acesse o grupo do WhatsApp e participe quando quiser: {WPP_LINK}\n\n"
-            f"A PdA existe para acelerar pessoas negras e indígenas no mercado de tecnologia, e você já "
+            f"A PdA está aqui para qualificar e empoderar pessoas negras e indígenas a construíremcarreira no mercado da tecnologia. Você já "
             f"está mostrando que tem o que precisa para chegar lá. Vai até o fim! 🚀"
         )
     elif tier == "Atenção":
         return (
             f"Oi, {nome}! 👋\n\n"
-            f"Você está no Bootcamp Afya e ainda tem tempo de garantir sua certificação em "
-            f"Automação de Dados com IA. O encerramento é em 12 de julho e cada semana conta.\n\n"
+            f"Você está no Bootcamp DIOxAfyaxPdA e ainda tem tempo de garantir sua certificação em "
+            f"Automação de Dados com IA. O encerramento é em 12 de julho e cada semana conta.📆\n\n"
             f"Sabia que a PdA oferece monitorias síncronas de todo o conteúdo? Se tiver dúvida em algum "
             f"módulo ou quiser avançar mais rápido, acesse o grupo do WhatsApp: {WPP_LINK}\n\n"
             f"Somos uma comunidade que acelera pessoas negras e indígenas no mercado de tecnologia, "
@@ -284,17 +284,17 @@ def generate_message(p: dict) -> str:
     elif tier == "No Caminho":
         return (
             f"Oi, {nome}! 👋\n\n"
-            f"Você está indo muito bem no Bootcamp Afya, parabéns pela dedicação!\n\n"
+            f"Você está indo muito bem no Bootcamp DIOxAfyaxPdA, parabéns pela dedicação!\n\n"
             f"Continue nesse ritmo e a certificação em Automação de Dados com IA é sua até 12 de julho. "
-            f"E se quiser acelerar ainda mais, a PdA tem monitorias síncronas para você: {WPP_LINK}\n\n"
-            f"A PdA está aqui para acelerar pessoas negras e indígenas no mercado de tecnologia. "
+            f"Se quiser acelerar ainda mais, a PdA tem monitorias síncronas para você: {WPP_LINK}\n\n"
+            f"A PdA está aqui para qualificar e empoderar pessoas negras e indígenas a construíremcarreira no mercado da tecnologia. "
             f"Você está chegando lá! 🌟"
         )
     elif tier == "Estagnado":
         return (
             f"Oi, {nome}! 👋\n\n"
-            f"Passamos para dar um alô e lembrar que o Bootcamp Afya ainda está aberto até 12 de julho.\n\n"
-            f"A PdA oferece monitorias síncronas para te apoiar onde precisar. "
+            f"Passamos para dar um alô e lembrar que o Bootcamp DIOxAfyaxPdA ainda está aberto até 12 de julho.\n\n"
+            f"A gente sabe que aprender sozinho(a) é difícil, por isso a PdA oferece monitorias síncronas para te apoiar onde precisar, viu? "
             f"Acesse o grupo do WhatsApp: {WPP_LINK}\n\n"
             f"Estamos torcendo por você! 💜"
         )

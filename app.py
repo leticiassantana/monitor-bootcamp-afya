@@ -480,7 +480,7 @@ st.markdown(f"""
 # ── SIDEBAR: FILE UPLOAD ──────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown(f"""
-    <p style="font-family:'Dela Gothic One',sans-serif;color:{ROXO};font-size:16px;margin-bottom:8px">
+    <p style="font-family:'Dela Gothic One',sans-serif;color:{YELLOW};font-size:16px;margin-bottom:8px">
     Carregar Relatório
     </p>
     """, unsafe_allow_html=True)
@@ -540,7 +540,7 @@ if not history:
     st.markdown(f"""
     <div class="empty-state">
       <h2>👈 Carregue um relatório para começar</h2>
-      <p>No <strong style="color:{ROXO}">painel lateral à esquerda</strong>, clique em <strong>"Browse files"</strong>
+      <p>No <strong style="color:{YELLOW}">painel lateral à esquerda</strong>, clique em <strong>"Browse files"</strong>
       e selecione os arquivos CSV ou XLSX baixados da DIO.<br><br>
       Você pode selecionar múltiplos arquivos de uma vez para carregar o histórico completo.</p>
     </div>
@@ -755,4 +755,4 @@ st.markdown(f"""
 <div style="text-align:center;padding:40px 0 20px;color:#c0b4d8;font-size:11px">
   Programadores do Amanhã · Monitor Bootcamp Afya
 </div>
-""", unsafe_allow_html=True)
+""", unsafe_allow_html=Tr
